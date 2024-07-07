@@ -721,7 +721,7 @@ export const DietPlanTemplates = [
     category: 'Weight Loss',
     icon: 'https://cdn-icons-png.flaticon.com/128/1593/1593745.png',
     slug: 'weight-loss-diet-plan-veg',
-    aiPrompt: 'Generate a Weight loss diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Weight loss diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like paneer, tofu, etc.)',
@@ -730,7 +730,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -752,6 +752,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -761,7 +767,7 @@ export const DietPlanTemplates = [
     category: 'Weight Loss',
     icon: 'https://cdn-icons-png.flaticon.com/128/1593/1593694.png',
     slug: 'weight-loss-diet-plan-non-veg',
-    aiPrompt: 'Generate a Weight loss diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Weight loss diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like chicken, fish, eggs, etc.)',
@@ -770,7 +776,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -792,6 +798,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -801,7 +813,7 @@ export const DietPlanTemplates = [
     category: 'Weight Gain',
     icon: 'https://cdn-icons-png.flaticon.com/128/4053/4053936.png',
     slug: 'weight-gain-diet-plan-veg',
-    aiPrompt: 'Generate a Weight gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Weight gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like nuts, dairy, etc.)',
@@ -810,7 +822,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -832,6 +844,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -841,7 +859,7 @@ export const DietPlanTemplates = [
     category: 'Weight Gain',
     icon: 'https://cdn-icons-png.flaticon.com/128/4053/4053925.png',
     slug: 'weight-gain-diet-plan-non-veg',
-    aiPrompt: 'Generate a Weight gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Weight gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like red meat, eggs, etc.)',
@@ -850,7 +868,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -872,6 +890,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -881,7 +905,7 @@ export const DietPlanTemplates = [
     category: 'Muscle Gain',
     icon: 'https://cdn-icons-png.flaticon.com/128/5522/5522626.png',
     slug: 'muscle-gain-diet-plan-veg',
-    aiPrompt: 'Generate a Muscle gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Muscle gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like lentils, quinoa, etc.)',
@@ -890,7 +914,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -912,6 +936,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -921,7 +951,7 @@ export const DietPlanTemplates = [
     category: 'Muscle Gain',
     icon: 'https://cdn-icons-png.flaticon.com/128/5522/5522626.png',
     slug: 'muscle-gain-diet-plan-non-veg',
-    aiPrompt: 'Generate a Muscle gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Muscle gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like chicken, fish, etc.)',
@@ -930,7 +960,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -952,6 +982,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -961,7 +997,7 @@ export const DietPlanTemplates = [
     category: 'Health',
     icon: 'https://cdn-icons-png.flaticon.com/128/3209/3209082.png',
     slug: 'diabetes-diet-plan-veg',
-    aiPrompt: 'Generate a Diabetes management diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Diabetes management diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like whole grains, vegetables, etc.)',
@@ -970,7 +1006,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -992,6 +1028,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -1001,7 +1043,7 @@ export const DietPlanTemplates = [
     category: 'Health',
     icon: 'https://cdn-icons-png.flaticon.com/128/3209/3209082.png',
     slug: 'diabetes-diet-plan-non-veg',
-    aiPrompt: 'Generate a Diabetes management diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Diabetes management diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like fish, lean meats, etc.)',
@@ -1010,7 +1052,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -1032,6 +1074,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -1041,7 +1089,7 @@ export const DietPlanTemplates = [
     category: 'Keto',
     icon: 'https://cdn-icons-png.flaticon.com/128/2829/2829592.png',
     slug: 'keto-diet-plan-veg',
-    aiPrompt: 'Generate a Keto diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Keto diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like avocado, nuts, etc.)',
@@ -1050,7 +1098,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -1072,6 +1120,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -1081,7 +1135,7 @@ export const DietPlanTemplates = [
     category: 'Keto',
     icon: 'https://cdn-icons-png.flaticon.com/128/2829/2829592.png',
     slug: 'keto-diet-plan-non-veg',
-    aiPrompt: 'Generate a Keto diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Keto diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like fatty fish, meat, etc.)',
@@ -1090,7 +1144,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -1112,6 +1166,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -1121,7 +1181,7 @@ export const DietPlanTemplates = [
     category: 'Weight Loss',
     icon: 'https://cdn-icons-png.flaticon.com/128/1593/1593745.png',
     slug: 'vegan-diet-plan-weight-loss',
-    aiPrompt: 'Generate a Vegan weight loss diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Vegan weight loss diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like legumes, soy products, etc.)',
@@ -1130,7 +1190,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -1152,6 +1212,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -1161,7 +1227,7 @@ export const DietPlanTemplates = [
     category: 'Muscle Gain',
     icon: 'https://cdn-icons-png.flaticon.com/128/5203/5203986.png',
     slug: 'vegan-diet-plan-muscle-gain',
-    aiPrompt: 'Generate a Vegan muscle gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Vegan muscle gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like chickpeas, quinoa, etc.)',
@@ -1170,7 +1236,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -1192,6 +1258,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -1201,7 +1273,7 @@ export const DietPlanTemplates = [
     category: 'Weight Loss',
     icon: 'https://cdn-icons-png.flaticon.com/128/1593/1593694.png',
     slug: 'gluten-free-diet-plan-weight-loss',
-    aiPrompt: 'Generate a Gluten-free weight loss diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Gluten-free weight loss diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like gluten-free grains, vegetables, etc.)',
@@ -1210,7 +1282,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -1232,6 +1304,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -1241,7 +1319,7 @@ export const DietPlanTemplates = [
     category: 'Muscle Gain',
     icon: 'https://cdn-icons-png.flaticon.com/128/5203/5203986.png',
     slug: 'gluten-free-diet-plan-muscle-gain',
-    aiPrompt: 'Generate a Gluten-free muscle gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Gluten-free muscle gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like lean meats, beans, etc.)',
@@ -1250,7 +1328,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -1272,6 +1350,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -1281,7 +1365,7 @@ export const DietPlanTemplates = [
     category: 'Weight Loss',
     icon: 'https://cdn-icons-png.flaticon.com/128/1593/1593745.png',
     slug: 'paleo-diet-plan-weight-loss',
-    aiPrompt: 'Generate a Paleo weight loss diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Paleo weight loss diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like lean meats, vegetables, etc.)',
@@ -1290,7 +1374,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -1312,6 +1396,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -1321,7 +1411,7 @@ export const DietPlanTemplates = [
     category: 'Muscle Gain',
     icon: 'https://cdn-icons-png.flaticon.com/128/3485/3485358.png',
     slug: 'paleo-diet-plan-muscle-gain',
-    aiPrompt: 'Generate a Paleo muscle gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Paleo muscle gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like nuts, seeds, etc.)',
@@ -1330,7 +1420,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -1352,6 +1442,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -1361,7 +1457,7 @@ export const DietPlanTemplates = [
     category: 'Weight Loss',
     icon: 'https://cdn-icons-png.flaticon.com/128/1593/1593694.png',
     slug: 'mediterranean-diet-plan-weight-loss',
-    aiPrompt: 'Generate a Mediterranean weight loss diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Mediterranean weight loss diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like olive oil, fish, etc.)',
@@ -1370,7 +1466,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -1392,6 +1488,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -1401,7 +1503,7 @@ export const DietPlanTemplates = [
     category: 'Muscle Gain',
     icon: 'https://cdn-icons-png.flaticon.com/128/3485/3485358.png',
     slug: 'mediterranean-diet-plan-muscle-gain',
-    aiPrompt: 'Generate a Mediterranean muscle gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate a Mediterranean muscle gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like whole grains, lean proteins, etc.)',
@@ -1410,7 +1512,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -1432,6 +1534,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -1441,7 +1549,7 @@ export const DietPlanTemplates = [
     category: 'Weight Loss',
     icon: 'https://cdn-icons-png.flaticon.com/128/1593/1593694.png',
     slug: 'intermittent-fasting-diet-plan-weight-loss',
-    aiPrompt: 'Generate an Intermittent fasting weight loss diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate an Intermittent fasting weight loss diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like healthy fats, lean proteins, etc.)',
@@ -1450,7 +1558,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -1472,6 +1580,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   },
@@ -1481,7 +1595,7 @@ export const DietPlanTemplates = [
     category: 'Muscle Gain',
     icon: 'https://cdn-icons-png.flaticon.com/128/3485/3485358.png',
     slug: 'intermittent-fasting-diet-plan-muscle-gain',
-    aiPrompt: 'Generate an Intermittent fasting muscle gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration in a bullet-wise format in Rich Text Editor Format.',
+    aiPrompt: 'Generate an Intermittent fasting muscle gain diet plan of given number of meals for given gender person with given weight based on priority foods and duration containing precise nutrient quantity if given in a bullet-wise format in Rich Text Editor Format.',
     form: [
       {
         label: 'Select Priority foods (like nuts, seeds, lean proteins, etc.)',
@@ -1490,7 +1604,7 @@ export const DietPlanTemplates = [
         required: true
       },
       {
-        label: 'Select the number of days for your plan',
+        label: 'Select the number of days for your plan (optional)',
         field: 'input',
         name: 'duration',
         required: false
@@ -1512,6 +1626,12 @@ export const DietPlanTemplates = [
         field: 'input',
         name: 'meals',
         required: true
+      },
+      {
+        label: 'Enter Nutrient Requirements if you have any (optional)',
+        field: 'textarea',
+        name: 'nutrients',
+        required: false
       }
     ]
   }

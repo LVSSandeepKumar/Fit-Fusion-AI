@@ -42,7 +42,7 @@ const TemplateListSection = ({userSearchInput} : any) => {
   }, [userSearchInput])
 
   return (
-    <div>
+    <div className="bg-slate-100">
       <Tabs defaultValue="workouts" className="w-full p-2 h-screen m-2 ">
         <TabsList className="w-full sm:gap-4 sm:px-4">
           <TabsTrigger
@@ -59,7 +59,7 @@ const TemplateListSection = ({userSearchInput} : any) => {
           </TabsTrigger>
         </TabsList>
         <TabsContent value="workouts">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-10 max-sm:p-2">
             {workoutTemplateList.map((item: TEMPLATE, index: number) => (
               <WorkoutsTemplateCard {...item} />
             ))}
