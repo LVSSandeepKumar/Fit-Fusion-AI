@@ -1,7 +1,8 @@
 import { DietPlanTemplates, WorkoutTemplates } from "@/app/(data)/Templates";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-import TemplateCard from "./TemplateCard";
 import { useEffect, useState } from "react";
+import WorkoutsTemplateCard from "./WorkoutsTemplateCard";
+import DietPlanTemplateCard from "./DietPlanTemplateCard";
 
 export interface TEMPLATE {
   name: string;
@@ -60,14 +61,14 @@ const TemplateListSection = ({userSearchInput} : any) => {
         <TabsContent value="workouts">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-10">
             {workoutTemplateList.map((item: TEMPLATE, index: number) => (
-              <TemplateCard {...item} />
+              <WorkoutsTemplateCard {...item} />
             ))}
           </div>
         </TabsContent>
         <TabsContent value="diet-plans">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-10">
             {dietPlanTemplateList.map((item: TEMPLATE, index: number) => (
-              <TemplateCard {...item} />
+              <DietPlanTemplateCard {...item} />
             ))}
           </div>
         </TabsContent>
