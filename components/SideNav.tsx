@@ -23,11 +23,6 @@ const SideNav = () => {
       icon: FileClock,
       path: "/dashboard/history",
     },
-    {
-      name: "Billing",
-      icon: Wallet,
-      path: "/dashboard/billing",
-    },
   ];
 
   return (
