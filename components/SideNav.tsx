@@ -37,7 +37,7 @@ const SideNav = () => {
         {MenuList.map((menu, index) => (
           <div
             className={`flex gap-2 mx-2 p-3 hover:bg-primary hover:text-white rounded-lg cursor-pointer ${
-              path == menu.path && "bg-primary text-white"
+              path == menu.path && "bg-primary text-white my-4"
             }`}
           >
             <Link href={menu.path} className="flex gap-2">

@@ -4,6 +4,10 @@ import { TEMPLATE } from "@/components/TemplateListSection";
 import WorkoutFormSection from "@/components/WorkoutFormSection";
 import WorkoutOutputSection from "@/components/WorkoutOutputSection";
 import { chatSession } from "@/utils/AiModel";
+import { db } from "@/utils/db";
+import { AIOutput } from "@/utils/schema";
+import { useUser } from "@clerk/nextjs";
+import moment from "moment";
 import { useState } from "react";
 
 interface PROPS {
@@ -13,7 +17,7 @@ interface PROPS {
 }
 
 const CreateNewWorkout = (props: PROPS) => {
-
+  const {user} = useUser();
   const [loading, setLoading] = useState(false);
   const [AiOutput, setAiOutput] = useState<string>('')
 
@@ -28,7 +32,20 @@ const CreateNewWorkout = (props: PROPS) => {
     const result = await chatSession.sendMessage(FinalAiPrompt);
     console.log(result.response.text());
     setAiOutput(result?.response.text());
+    await SaveInDb(JSON.stringify(formData), selectedWorkoutTemplate?.slug, result?.response.text());
     setLoading(false);
+  }
+
+  const SaveInDb = async(formData:any, slug:any, AiResp:string) => {
+    const result = await db.insert(AIOutput).values({
+      formData: formData,
+      templateSlug: slug,
+      aiResponse: AiResp,
+      createdBy: user?.primaryEmailAddress?.emailAddress,
+      createdAt: moment().format("Do MMMM YYYY, h:mm a")
+    });
+
+    console.log(result);
   }
 
   return (
