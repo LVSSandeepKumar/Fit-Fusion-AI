@@ -3,6 +3,8 @@ import { WorkoutTemplates } from "@/app/(data)/Templates";
 import { TEMPLATE } from "@/components/TemplateListSection";
 import WorkoutFormSection from "@/components/WorkoutFormSection";
 import WorkoutOutputSection from "@/components/WorkoutOutputSection";
+import { chatSession } from "@/utils/AiModel";
+import { useState } from "react";
 
 interface PROPS {
   params: {
@@ -12,9 +14,21 @@ interface PROPS {
 
 const CreateNewWorkout = (props: PROPS) => {
 
-  const selectedWorkoutTemplate : TEMPLATE | undefined = WorkoutTemplates?.find((item) => item.slug == props.params["template-slug"]);
-  const GenerateAIWorkout = (formData : any) => {
+  const [loading, setLoading] = useState(false);
+  const [AiOutput, setAiOutput] = useState<string>('')
 
+  const selectedWorkoutTemplate : TEMPLATE | undefined = WorkoutTemplates?.find((item) => item.slug == props.params["template-slug"]);
+  
+  const GenerateAIWorkout = async (formData : any) => {
+    setLoading(true);
+    const selectedPrompt = selectedWorkoutTemplate?.aiPrompt;
+
+    const FinalAiPrompt = JSON.stringify(formData) + "," + selectedPrompt;
+
+    const result = await chatSession.sendMessage(FinalAiPrompt);
+    console.log(result.response.text());
+    setAiOutput(result?.response.text());
+    setLoading(false);
   }
 
   return (
@@ -22,8 +36,11 @@ const CreateNewWorkout = (props: PROPS) => {
       <WorkoutFormSection
         selectedWorkoutTemplate = {selectedWorkoutTemplate}
         userFormInput={(v:any) => GenerateAIWorkout(v)}
+        loading={loading}
       />
-      <WorkoutOutputSection />
+      <WorkoutOutputSection 
+        AiOutput={AiOutput}
+      />
     </div>
   );
 };

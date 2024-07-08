@@ -5,13 +5,15 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import { useState } from "react";
+import { Loader2Icon } from "lucide-react";
 
 interface PROPS {
   selectedWorkoutTemplate?: TEMPLATE,
-  userFormInput: any
+  userFormInput: any,
+  loading: boolean
 }
 
-const WorkoutFormSection = ({ selectedWorkoutTemplate, userFormInput }: PROPS) => {
+const WorkoutFormSection = ({ selectedWorkoutTemplate, userFormInput, loading }: PROPS) => {
 
   const [formData, setFormData] = useState<any>();
 
@@ -50,7 +52,9 @@ const WorkoutFormSection = ({ selectedWorkoutTemplate, userFormInput }: PROPS) =
             ) : null}
           </div>
         ))}
-        <Button type="submit" className="w-full my-6">Generate Workout Plan</Button>
+        <Button type="submit" className="w-full my-6 gap-2" disabled={loading}>
+          {loading && <Loader2Icon className="animate-spin"/>}
+          Generate Workout Plan</Button>
       </form>
     </div>
   );

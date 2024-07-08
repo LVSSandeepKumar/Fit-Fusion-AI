@@ -5,13 +5,15 @@ import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Textarea } from "./ui/textarea"
 import { useState } from "react";
+import { Loader2Icon } from "lucide-react";
 
 interface PROPS {
   selectedDietPlanTemplate? : TEMPLATE,
-  userFormInput : any
+  userFormInput : any,
+  loading: boolean
 }
 
-const DietPlanFormSection = ({selectedDietPlanTemplate, userFormInput} : PROPS) => {
+const DietPlanFormSection = ({selectedDietPlanTemplate, userFormInput, loading} : PROPS) => {
 
   const [formData, setFormData] = useState<any>();
 
@@ -50,7 +52,9 @@ const DietPlanFormSection = ({selectedDietPlanTemplate, userFormInput} : PROPS) 
             ) : null}
           </div>
         ))}
-        <Button type="submit" className="w-full my-6">Generate Diet Plan</Button>
+        <Button type="submit" className="w-full my-6" disabled={loading}>
+          {loading && <Loader2Icon className="animate-spin" />}
+          Generate Diet Plan</Button>
       </form>
     </div>
   )

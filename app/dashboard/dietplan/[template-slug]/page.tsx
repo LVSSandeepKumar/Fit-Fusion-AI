@@ -3,6 +3,8 @@ import { DietPlanTemplates } from "@/app/(data)/Templates"
 import DietPlanFormSection from "@/components/DietPlanFormSection"
 import DietPlanOutputSection from "@/components/DietPlanOutputSection"
 import { TEMPLATE } from "@/components/TemplateListSection"
+import { chatSession } from "@/utils/AiModel";
+import { useState } from "react";
 
 interface PROPS {
   params : {
@@ -11,10 +13,20 @@ interface PROPS {
 }
 
 const CreateNewDietPlan = (props:PROPS) => {
+  const [loading, setLoading] = useState(false);
+  const [AiOutput, setAiOutput] = useState<string>('')
 
   const selectedDietPlanTemplate : TEMPLATE | undefined = DietPlanTemplates?.find((item) => item.slug == props.params["template-slug"]);
-  const GenerateAIDietPlan = (formData:any) => {
+  const GenerateAIDietPlan = async (formData:any) => {
+    setLoading(true);
+    const selectedPrompt = selectedDietPlanTemplate?.aiPrompt;
 
+    const FinalAiPrompt = JSON.stringify(formData) + "," + selectedPrompt;
+
+    const result = await chatSession.sendMessage(FinalAiPrompt);
+    console.log(result.response.text());
+    setAiOutput(result?.response.text());
+    setLoading(false);
   }
   
   return (
@@ -22,8 +34,11 @@ const CreateNewDietPlan = (props:PROPS) => {
       <DietPlanFormSection 
         selectedDietPlanTemplate={selectedDietPlanTemplate}
         userFormInput={(v:any) => GenerateAIDietPlan(v)}
+        loading={loading}
       />
-      <DietPlanOutputSection />
+      <DietPlanOutputSection 
+      AiOutput={AiOutput}
+      />
     </div>
   )
 }
