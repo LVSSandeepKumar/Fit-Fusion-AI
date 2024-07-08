@@ -23,8 +23,9 @@ const History = () => {
         navigator.clipboard.writeText(aiResponse);
     }
     
-    const countWords = (text: any) => {
-        return text.trim().split(/\s+/).filter(word => word.length > 0).length;
+    const countWords = (text: string) => {
+        return text.trim().split(/\s+/).
+        filter(word => word.length > 0).length;
     }
       
   return (

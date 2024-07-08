@@ -61,14 +61,14 @@ const TemplateListSection = ({userSearchInput} : any) => {
         <TabsContent value="workouts">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-10 max-sm:p-2">
             {workoutTemplateList.map((item: TEMPLATE, index: number) => (
-              <WorkoutsTemplateCard {...item} />
+              <WorkoutsTemplateCard {...item} key={index}/>
             ))}
           </div>
         </TabsContent>
         <TabsContent value="diet-plans">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-10 max-sm:p-2">
             {dietPlanTemplateList.map((item: TEMPLATE, index: number) => (
-              <DietPlanTemplateCard {...item} />
+              <DietPlanTemplateCard {...item} key={index}/>
             ))}
           </div>
         </TabsContent>

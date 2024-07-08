@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import HamburgerMenu from "./HamburgerMenu";
 import { Menu } from "lucide-react";
 
 const Header = () => {

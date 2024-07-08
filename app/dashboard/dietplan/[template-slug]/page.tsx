@@ -39,7 +39,10 @@ const CreateNewDietPlan = (props: PROPS) => {
   };
 
   const SaveInDb = async(formData:any, slug:any, AiResp:string) => {
-    const result = await db.insert(AIOutput).values({
+    
+    const result = await db.insert(AIOutput)
+    /* @ts-ignore */
+    .values({
       formData: formData,
       templateSlug: slug,
       aiResponse: AiResp,

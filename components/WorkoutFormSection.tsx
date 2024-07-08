@@ -29,8 +29,9 @@ const WorkoutFormSection = ({ selectedWorkoutTemplate, userFormInput, loading }:
 
   return (
     <div className="p-5 border shadow-md rounded-lg col-span-2">
-      {/* @ts-ignore */}
+      
       <Image
+        {/* @ts-ignore */...Image}
         src={selectedWorkoutTemplate?.icon}
         alt="icon"
         width={70}
@@ -43,7 +44,7 @@ const WorkoutFormSection = ({ selectedWorkoutTemplate, userFormInput, loading }:
 
       <form className="mt-6" onSubmit={onSubmit}> 
         {selectedWorkoutTemplate?.form?.map((item, index) => (
-          <div className="my-2 flex flex-col gap-2 mb-7">
+          <div className="my-2 flex flex-col gap-2 mb-7" key={index}>
             <label className="font-bold">{item.label}</label>
             {item.field == "input" ? (
               <Input name={item.name} required={item.required} onChange={handleInputChange}/>
