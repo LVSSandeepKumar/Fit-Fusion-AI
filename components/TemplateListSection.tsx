@@ -66,7 +66,7 @@ const TemplateListSection = ({userSearchInput} : any) => {
           </div>
         </TabsContent>
         <TabsContent value="diet-plans">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-10 max-sm:p-2">
             {dietPlanTemplateList.map((item: TEMPLATE, index: number) => (
               <DietPlanTemplateCard {...item} />
             ))}

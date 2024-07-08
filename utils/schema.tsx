@@ -5,6 +5,6 @@ export const AIOutput = pgTable("AiOutput", {
   formData: varchar('formData').notNull(),
   aiResponse: text('aiResponse'),
   templateSlug: varchar('templateSlug').notNull(),
-  createdBy: varchar('createdBy'),
+  createdBy: varchar('createdBy').notNull(),
   createdAt: varchar('createdAt')
 });
