@@ -1,6 +1,6 @@
 "use client";
 import { SignOutButton } from "@clerk/nextjs";
-import { FileClock, LayoutDashboard, LogOut, Settings, Wallet } from "lucide-react";
+import { FileClock, LayoutDashboard, LogOut, Settings, Settings2, Wallet } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -23,6 +23,11 @@ const SideNav = () => {
       icon: FileClock,
       path: "/dashboard/history",
     },
+    {
+      name:"Profile",
+      icon: Settings2,
+      path: "/dashboard/profile"
+    }
   ];
 
   return (
