@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
-import { Menu } from "lucide-react";
+import { LogOut, Menu } from "lucide-react";
+import { SignOutButton } from "@clerk/nextjs";
+import { Button } from "./ui/button";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +20,20 @@ const Header = () => {
       {isOpen && (
         <div className="absolute top-12 right-4 bg-gray-800 text-white rounded-lg p-2 lg:hidden">
           <ul>
-            <li className="py-2 border-b border-gray-700"><a href="/dashboard">Dashboard</a></li>
-            <li className="py-2 border-b border-gray-700"><a href="/dashboard/history">History</a></li>
+            <li className="py-2 border-b border-gray-700">
+              <a href="/dashboard">Dashboard</a>
+            </li>
+            <li className="py-2 border-b border-gray-700">
+              <a href="/dashboard/history">History</a>
+            </li>
+            <li className="py-2 border-b border-gray-700">
+              <SignOutButton>
+                <Button className="gap-2 ">
+                  <LogOut />
+                  Sign Out
+                </Button>
+              </SignOutButton>
+            </li>
           </ul>
         </div>
       )}

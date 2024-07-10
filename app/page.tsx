@@ -26,7 +26,7 @@ export default function Home() {
           </Button>
         </Link>
       </div>
-      <footer>
+      <footer className="text-center">
         Made by <Link href={'https://threed-web-dev-portfolio.onrender.com'}>LVS Sandeep Kumar</Link>
       </footer>
     </main>

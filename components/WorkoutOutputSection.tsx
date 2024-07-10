@@ -22,7 +22,6 @@ const WorkoutOutputSection = ({ AiOutput }: PROPS) => {
   const handleChange = () => {
     if (editorRef.current) {
       const editorInstance = editorRef.current.getInstance();
-      console.log(editorInstance.getMarkdown());
     }
   };
 
