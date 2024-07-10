@@ -35,19 +35,19 @@ const History = () => {
             <p>Find all your search history here.</p>
         </div>
         <div className='grid grid-cols-7 mt-6 w-full'>
-            <div className='bg-slate-100 col-span-2 md:pl-5 md:p-2 p-1 font-bold text-md'>
+            <div className='bg-slate-100 col-span-2 md:pl-5 md:p-2 p-1 font-bold text-[12px]'>
                 <h2>TEMPLATE</h2> 
             </div>
-            <div className='bg-slate-100 col-span-2 md:p-2 p-1 md:font-bold font-semibold md:text-md text-xs'>
+            <div className='bg-slate-100 col-span-2 md:p-2 p-1 md:font-bold font-semibold md:text-md text-[12px]'>
                 <h2>AI RESPONSE</h2>
             </div>
             <div className='bg-slate-100 md:p-2 p-1 md:font-bold font-semibold md:text-md text-sm'>
                 <h2>DATE</h2>
             </div>
-            <div className='bg-slate-100 md:p-2 p-1 md:font-bold font-semibold md:text-md text-sm'>
+            <div className='bg-slate-100 md:p-2 p-1 md:font-bold font-semibold md:text-md text-sm max-sm:hidden'>
                 <h2>WORDS</h2>
             </div>
-            <div className='bg-slate-100 md:p-2 p-1 md:font-bold font-semibold md:text-md text-sm'>
+            <div className='bg-slate-100 md:p-2 p-1 md:font-bold font-semibold md:text-md text-sm w-full'>
                 <h2>COPY</h2>
             </div>
         </div>
@@ -56,7 +56,7 @@ const History = () => {
                 <p className="col-span-2 text-start p-2">{item.templateSlug}</p>
                 <p className="col-span-2 line-clamp-3">{item.aiResponse}</p>
                 <p>{item.createdAt}</p>
-                <p>{countWords(item.aiResponse)}</p>
+                <p className="max-sm:hidden">{countWords(item.aiResponse)}</p>
                 <Copy className="md:w-8 md:h-8 h-6 w-6 cursor-pointer" onClick={() => handleCopy(item.aiResponse)}/>
                 </div>
             ))}
@@ -64,4 +64,4 @@ const History = () => {
   )
 }
 
-export default History
+export default History;

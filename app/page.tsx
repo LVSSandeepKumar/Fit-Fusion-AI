@@ -11,7 +11,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col items-center justify-center gap-4">
         <h2 className="text-3xl font-bold text-primary">Fit-Fusion AI</h2>
-        <p className="text-md font-semibold">
+        <p className="text-md font-semibold text-center">
           A one stop destination for all your fitness needs.
         </p>
       </div>
